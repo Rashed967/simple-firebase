@@ -1,17 +1,18 @@
 import React from 'react';
-import {GoogleAuthProvider, getAuth} from "firebase/auth"
-import App from '../../App';
+import {GoogleAuthProvider, getAuth} from "firebase/auth";
+import app from '../../firebase/firebase.init';
 
 const Login = () => {
-    const auth = getAuth(App)
-    const provider = new GoogleAuthProvider()
-    const handleGoogleSignIn = () => {
-        console.log("google sign in successfull")
+
+    const auth = getAuth(app)
+    const provide = new GoogleAuthProvider()
+    const googleSignIn = () => {
+        console.log('google mama is comming')
     }
     return (
         <div>
             <h2>Login page</h2>
-            <button onClick={handleGoogleSignIn}>go to login page</button>
+            <button onClick={googleSignIn}>Login</button>
         </div>
     );
 };
